@@ -23,6 +23,15 @@ public class Converter
 					{
 						System.out.println("Please enter a number less than or equal to 128");
 						userChoice = userInput.nextInt();
+						int binaryNumber = 0;
+						if (userChoice == 128) 
+							{
+								System.out.println(userChoice + " in binary is 1000000");
+							}
+						else
+							{
+								
+							}
 					}
 				else if(userChoice == 2)
 					{
