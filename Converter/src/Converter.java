@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 public class Converter
 	{
+		static boolean run = true;
 		public static void main (String[] args)
 		{
 			int userChoice;
