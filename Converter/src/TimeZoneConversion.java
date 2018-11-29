@@ -4,6 +4,12 @@ public class TimeZoneConversion
 		static Scanner userInput = new Scanner(System.in);
 		public static void TimeZones()
 			{
+				System.out.println("Welcome to the time zone converter!");
+				System.out.println("First, what's your name?");
+				Scanner userName = new Scanner(System.in);
+				String name = userName.nextLine();
+				System.out.println("Welcome, " + name + ".");
+				
 				System.out.println("First, please enter the hour of the time where you are.");
 				Scanner hour = new Scanner(System.in);
 				int userHour = hour.nextInt();
@@ -12,10 +18,17 @@ public class TimeZoneConversion
 				int userMins = mins.nextInt();
 				
 				System.out.println();
+				System.out.println("Is it AM or PM?");
+				Scanner tod = new Scanner(System.in);
+				String timeOfDay = tod.nextLine();
+				
+				System.out.println();
 				System.out.println("Which US time zone are you in?");
 				System.out.println("Pacific, Mountain, Central, Eastern, Hawaii, or Alaska?");
 				Scanner timeZone = new Scanner(System.in);
 				String userZone = timeZone.nextLine();
+				
+				
 				
 				System.out.println();
 				System.out.println("Next, Which time zone would you like to convert to?");
@@ -144,9 +157,22 @@ public class TimeZoneConversion
 						userHour = userHour + 1;
 					}
 				
+				String ap = "AM";
+
+				if(userHour > 12 && timeOfDay.equals("AM"))
+					{
+						userHour = userHour - 12;
+						ap = "PM";
+					}
+				if(userHour > 12 && timeOfDay.equals("PM"))
+					{
+						userHour = userHour - 12;
+						ap = "AM";
+					}
 				
 				
-				System.out.println("The military time in the " + userZoneTo + " time zone is " + userHour + ":" + userMins + ".");
+				
+				System.out.println("The time in the " + userZoneTo + " time zone is " + userHour + ":" + userMins + " " + ap + ".");
 			}
 
 	}
