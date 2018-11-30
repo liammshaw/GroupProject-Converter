@@ -18,6 +18,7 @@ public class Converter
 					System.out.println("4) US Standard Converter");
 					System.out.println("5) Currency Converter");
 					System.out.println("6) Tempurature Converter");
+					System.out.println("7) Shoe Size Converter");
 					userChoice = userInput.nextInt();
 					switch(userChoice)
 					{
@@ -35,6 +36,12 @@ public class Converter
 							break;
 						case 5:
 							Currency.convertCurrency();
+							break;
+						case 6:
+							Temperature.temperatureConverter();
+							break;
+						case 7:
+							ShoeSize.shoeSizeConverter();
 							break;
 					}
 					System.out.println("Would you like to convert again?");
